@@ -1,0 +1,26 @@
+<p>Question list</p>
+
+<table>
+	<thead>
+
+		<tr>
+			<th>Id</th>
+			<th>Title</th>
+			<th>Question Type</th>
+			<th>Tags</th>
+			<th>Difficulty</th>
+		</tr>
+	</thead>
+
+	<tbody>
+
+		<tr *ngFor="let question of questionList">
+			<td>{{question.id}}</td>
+			<td>{{question.title}}</td>
+			<td>{{question.tags}}</td>
+			<td>{{question.difficulty}}</td>
+		</tr>
+
+	</tbody>
+
+</table>

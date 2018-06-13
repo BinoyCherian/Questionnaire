@@ -1,0 +1,22 @@
+<!--  We are going to start with the Login component
+	  I already have a design which I plan to use for this project	
+ -->
+
+<div class="centre_div">
+	<form class="form" #loginForm="ngForm">
+		<div class="illustration">
+			<i class="icon ion-ios-locked-outline flash animated"></i>
+		</div>
+		<div class="form-group email-id">
+			<input class="form-control" type="text" name="email" required
+				[(ngModel)]="login.emailId" placeholder="Email">
+		</div>
+		<div class="form-group email-id">
+			<input class="form-control" type="password" name="password" required
+				[(ngModel)]="login.password" placeholder="Password">
+		</div>
+		<div class="button-div form-group" style="text-align: center;">
+			<button class="btn btn-primary" type="submit" (click)="validate()">Login</button>
+		</div>
+	</form>
+</div>

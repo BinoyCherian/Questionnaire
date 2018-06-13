@@ -1,0 +1,7 @@
+{
+  "checkLoginUrl": "restified/login/checklogin",
+  "getLoginsUrl": "restified/login/",
+  "putLoginUrl":"restified/login/",
+  "deleteLoginUrl":"restified/login/",
+  "updateLoginUrl":"restified/login/"
+}
