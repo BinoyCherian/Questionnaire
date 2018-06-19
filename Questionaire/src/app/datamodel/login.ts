@@ -6,4 +6,12 @@ export class Login {
     this.emailId = emailId;
     this.password = password;
   }
+
+  public getEmail() {
+    return this.emailId;
+  }
+
+  public getPassword() {
+    return this.password;
+  }
 }

@@ -1,6 +1,7 @@
 import {Login} from '../../datamodel/login';
 import {LoginService} from '../../services/login/login.service';
 import {Component, OnInit} from '@angular/core';
+import {FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -8,8 +9,6 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  submitted = false;
 
   login: Login;
 
@@ -20,8 +19,12 @@ export class LoginComponent implements OnInit {
   }
 
   validate() {
-    this.submitted = true;
-    console.log('Submitting' + this.login.emailId);
-  }
+    console.log('Email: ' + this.login.emailId);
+    console.log('password: ' + this.login.password);
 
+    this.loginService.checkLogin(this.login)
+      .subscribe(() => console.log('Login success'), console.error);
+
+    this.loginService.authenticateUser(this.login).subscribe(() => console.log('Login success'), console.error);
+  }
 }
