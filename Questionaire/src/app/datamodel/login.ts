@@ -1,14 +1,14 @@
 export class Login {
-  emailId: string;
+  email: string;
   password: string;
 
-  constructor(emailId: string, password: string) {
-    this.emailId = emailId;
+  constructor(email: string, password: string) {
+    this.email = email;
     this.password = password;
   }
 
   public getEmail() {
-    return this.emailId;
+    return this.email;
   }
 
   public getPassword() {

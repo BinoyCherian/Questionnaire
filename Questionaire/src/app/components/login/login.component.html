@@ -9,14 +9,14 @@
 		</div>
 		<div class="form-group email-id">
 			<input class="form-control" type="text" name="email" required
-				[(ngModel)]="login.emailId" placeholder="Email">
+				[(ngModel)]="login.email" placeholder="Email">
 		</div>
 		<div class="form-group email-id">
 			<input class="form-control" type="password" name="password" required
 				[(ngModel)]="login.password" placeholder="Password">
 		</div>
 		<div class="button-div form-group" style="text-align: center;">
-			<button class="btn btn-primary" type="submit" (click)="validate()">Login</button>
+			<button class="btn btn-primary" type="button" (click)="validate()">Login</button>
 		</div>
 	</form>
 </div>

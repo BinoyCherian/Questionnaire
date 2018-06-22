@@ -1,14 +1,12 @@
 <p>Question list</p>
-
-<table>
+<div  class="table-responsive">
+<table class="table table-striped table-sm">
 	<thead>
 
 		<tr>
 			<th>Id</th>
 			<th>Title</th>
-			<th>Question Type</th>
-			<th>Tags</th>
-			<th>Difficulty</th>
+			<th>Type of Question</th>
 		</tr>
 	</thead>
 
@@ -16,11 +14,11 @@
 
 		<tr *ngFor="let question of questionList">
 			<td>{{question.id}}</td>
-			<td>{{question.title}}</td>
-			<td>{{question.tags}}</td>
-			<td>{{question.difficulty}}</td>
+			<td>{{question.question}}</td>
+			<td>{{question.type}}</td>
 		</tr>
 
 	</tbody>
 
 </table>
+</div>
