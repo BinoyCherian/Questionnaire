@@ -1,3 +1,4 @@
+import {QuestionResponse} from '../../datamodel/QuestionResponse';
 import {Question} from '../../datamodel/question';
 import {QuestionService} from '../../services/question/question.service';
 import {Component, OnInit} from '@angular/core';
@@ -9,12 +10,33 @@ import {Component, OnInit} from '@angular/core';
 })
 export class QuestionlistComponent implements OnInit {
 
-  questionList: Question[];
+  questionList: Question[] = [];
 
   constructor(private questionService: QuestionService) {}
 
   ngOnInit() {
-    this.questionList = this.questionService.getAllQuestions();
+
+    this.questionService.fetchQuestions().
+      subscribe(
+      data => {
+        if (data) {
+          this.questionList = data;
+        }
+      }
+      );
+
+    console.log(this.questionList);
+  }
+
+  fetchQuestions(): void {
+
+    var questionResp: QuestionResponse;
+    console.log('Inside question fetch method');
+
+
+
+
+    console.log('Question List ' + this.questionList);
   }
 
 }
