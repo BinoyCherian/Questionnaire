@@ -28,15 +28,4 @@ export class QuestionlistComponent implements OnInit {
     console.log(this.questionList);
   }
 
-  fetchQuestions(): void {
-
-    var questionResp: QuestionResponse;
-    console.log('Inside question fetch method');
-
-
-
-
-    console.log('Question List ' + this.questionList);
-  }
-
 }

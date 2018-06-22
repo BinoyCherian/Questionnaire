@@ -1,27 +1,27 @@
-<form>
+<form class="form" #addForm="ngForm">
 
   <div class="form-group">
     <label for="inputAddress">Question</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="Enter a new question">
+    <input type="text" class="form-control" placeholder="Enter a new question" name="question" [(ngModel)]="question.question">
   </div>
    <div class="form-row">
     <div class="form-group">
     <label for="formGroupExampleInput">Choice 1</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Choice 1">
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Choice 1" name="mcqChoice1" [(ngModel)]="mcqChoice1.choice">
   </div>
  
   <div class="form-group">
     <label for="formGroupExampleInput2">Choice 2</label>
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Choice 2">
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Choice 2" name="mcqChoice2" [(ngModel)]="mcqChoice2.choice">
   </div>
    <div class="form-group">
     <label for="formGroupExampleInput">Choice 3</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Choice 3">
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Choice 3" name="mcqChoice3" [(ngModel)]="mcqChoice3.choice">
   </div>
  
   <div class="form-group">
     <label for="formGroupExampleInput2">Choice 4</label>
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Choice 4">
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Choice 4" name="mcqChoice4" [(ngModel)]="mcqChoice4.choice">
   </div>
   
    </div>
@@ -31,7 +31,7 @@
 
     <div class="form-group col-md-4">
       <label for="inputState">Question Type</label>
-      <select id="inputState" class="form-control">
+      <select id="inputState" name="type" class="form-control" [(ngModel)]="questionType">
         <option selected>Choose</option>
         <option>MCQ</option>
         <option>Open</option>
@@ -40,16 +40,16 @@
     </div>
     <div class="form-group col-md-4">
       <label for="inputState">Correct option</label>
-      <select id="inputState" class="form-control">
+      <select id="inputState" class="form-control" name="correctOption" [(ngModel)]="correctOption">
         <option selected>Correct option</option>
         <option>1</option>
         <option>2</option>
         <option>3</option>
-         <option>4</option>
+        <option>4</option>
       </select>
     </div>
     
   </div>
 
-  <button type="submit" class="btn btn-primary">Add question</button>
+  <button type="submit" class="btn btn-primary" (click)="addQuestion()">Add question</button>
 </form>
