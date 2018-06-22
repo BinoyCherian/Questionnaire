@@ -19,6 +19,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AddquestionComponent } from './components/addquestion/addquestion.component';
 import { DeletequestionComponent } from './components/deletequestion/deletequestion.component';
 import { EditquestionComponent } from './components/editquestion/editquestion.component';
+import { McqchoiceService } from './services/mcqChoice/mcqchoice.service';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { EditquestionComponent } from './components/editquestion/editquestion.co
   ],
   providers: [
     QuestionService,
-    LoginService
+    LoginService,
+    McqchoiceService
   ],
   bootstrap: [AppComponent]
 })
